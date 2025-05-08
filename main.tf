@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "JudeTech"
+    workspaces {
+      name = "learn-terraform-aws"
+    }
+
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -7,6 +14,8 @@ terraform {
   }
 
   required_version = ">= 1.2.0"
+
+
 }
 
 provider "aws" {
